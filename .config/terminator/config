@@ -12,14 +12,15 @@
 
 [profiles]
   [[default]]
-    background_color = "#300a24"
-    background_darkness = 0.85
+    background_color = "#0d1117"
+    foreground_color = "#58a6ff"
+    background_darkness = 0.90
     background_type = transparent
-    cursor_color = "#aaaaaa"
-    foreground_color = "#ffffff"
-    scrollback_infinite = True
+    cursor_color = "#00ff00"
+    palette = "#000000:#ff5555:#50fa7b:#f1fa8c:#bd93f9:#ff79c6:#8be9fd:#bbbbbb:#555555:#ff5555:#50fa7b:#f1fa8c:#bd93f9:#ff79c6:#8be9fd:#ffffff"
+    font = FiraCode Nerd Font Mono 11
     use_system_font = False
-    font = Monospace 11
+    scrollback_infinite = True
 
 [layouts]
   [[default]]
