@@ -1,0 +1,69 @@
+[global_config]
+  title_hide_sizetext = True
+  borderless = True
+
+[keybindings]
+  split_horiz = <Control>Down
+  split_vert = <Control>Right
+  go_right = <Alt>Right
+  go_left = <Alt>Left
+  go_down = <Alt>Down
+  go_up = <Alt>Up
+
+[profiles]
+  [[default]]
+    background_color = "#300a24"
+    background_darkness = 0.85
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#ffffff"
+    scrollback_infinite = True
+    use_system_font = False
+    font = Monospace 11
+
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+
+  [[dev]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+      size = 1600, 900
+    [[[child1]]]
+      type = VPaned
+      parent = window0
+    [[[child2]]]
+      type = HPaned
+      parent = child1
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      profile = default
+      directory = ~
+    [[[terminal4]]]
+      type = Terminal
+      parent = child2
+      profile = default
+      directory = ~
+    [[[child5]]]
+      type = HPaned
+      parent = child1
+    [[[terminal6]]]
+      type = Terminal
+      parent = child5
+      profile = default
+      directory = ~
+    [[[terminal7]]]
+      type = Terminal
+      parent = child5
+      profile = default
+      directory = /var/log
+      command = tail -f /var/log/syslog
+
+[plugins]
