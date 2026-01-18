@@ -1,10 +1,7 @@
-# Path to oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 
-# Theme - Powerlevel10k (le plus stylé)
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Plugins utiles pour un style hacker/dev
 plugins=(
   git
   docker
@@ -23,7 +20,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Tes alias
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ~='cd ~'
@@ -52,7 +48,6 @@ py() {
   fi
 }
 
-# Alias bonus style hacker
 alias ports='netstat -tulanp'
 alias myip='curl ifconfig.me'
 alias matrix='cmatrix -b'
