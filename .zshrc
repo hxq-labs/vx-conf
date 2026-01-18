@@ -1,21 +1,42 @@
-# Navigation
+# Path to oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
+
+# Theme - Powerlevel10k (le plus stylé)
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Plugins utiles pour un style hacker/dev
+plugins=(
+  git
+  docker
+  docker-compose
+  sudo
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  z
+  web-search
+  jsontools
+  colored-man-pages
+  command-not-found
+  extract
+  history
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# Tes alias
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ~='cd ~'
-
-# Listing
 alias ll='ls -alF --color=auto'
 alias la='ls -A --color=auto'
 alias l='ls -CF --color=auto'
 
-# Grep function
 gr() {
   local pattern="$1"
   local dir="${2:-.}"
   grep -rni "$pattern" "$dir"
 }
 
-# Git shortcuts
 alias ga='git add'
 alias gm='git commit -m "dev"'
 alias gp='git push origin main'
@@ -23,7 +44,6 @@ alias gl='git pull origin main'
 alias pl='git pull origin main'
 alias gs='git status'
 
-# Python helper
 py() {
   if [ -f "$1.py" ]; then
     python3 "$1.py"
@@ -31,3 +51,11 @@ py() {
     python3 "$@"
   fi
 }
+
+# Alias bonus style hacker
+alias ports='netstat -tulanp'
+alias myip='curl ifconfig.me'
+alias matrix='cmatrix -b'
+alias hack='Hollywood'
+alias meteo='curl wttr.in/Paris'
+alias speed='speedtest-cli'
