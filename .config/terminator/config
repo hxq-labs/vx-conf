@@ -9,6 +9,7 @@
   go_left = <Alt>Left
   go_down = <Alt>Down
   go_up = <Alt>Up
+  toggle_zoom = <Control>f
 
 [profiles]
   [[default]]
